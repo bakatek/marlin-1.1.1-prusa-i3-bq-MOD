@@ -299,18 +299,18 @@
   //#define SLOW_PWM_HEATERS // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
   #define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 20 //MOD EPEL TEST FROM 10 TO 20 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
   #define K1 0.95 //smoothing factor within the PID
   
   // Prusa I3 with PT100 E1 3mm @ 265°
-  #define  DEFAULT_Kp 15.72 // MOD EPEL
-  #define  DEFAULT_Ki 2.63  // MOD EPEL
-  #define  DEFAULT_Kd 23.51 // MOD EPEL
+  //#define  DEFAULT_Kp 15.72 // MOD EPEL
+  //#define  DEFAULT_Ki 2.63  // MOD EPEL
+  //#define  DEFAULT_Kd 23.51 // MOD EPEL
   // Hephestos i3
-  //#define  DEFAULT_Kp 23.05
-  //#define  DEFAULT_Ki 2.00
-  //#define  DEFAULT_Kd 66.47
+  #define  DEFAULT_Kp 23.05
+  #define  DEFAULT_Ki 2.00
+  #define  DEFAULT_Kd 66.47
 
 #endif // PIDTEMP
 
