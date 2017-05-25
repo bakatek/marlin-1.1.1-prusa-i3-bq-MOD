@@ -1,9 +1,14 @@
 ; -- START GCODE --
+M140 S{material_bed_temperature};
+M104 S{material_print_temperature};
+
 G21                     ;set units to millimetres
 G90                     ;set to absolute positioning
 M106 S0                 ;set fan speed to zero (turned off)
 G28                     ;move to the X/Y origin (Home)
 G29                     ;move to the Z origin (Home)
+M190 S{material_bed_temperature};
+M109 S{material_print_temperature};
 
 M300 S2637 P5
 G4 P35.1

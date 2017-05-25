@@ -1,10 +1,9 @@
 ; -- END GCODE --
 G91               ;set to relative positioning
-G0 Z+5 E-10 F{travel_speed} ;move Z up a bit and retract filament even more
+G0 Z+5 E-10 F{speed_travel} ;move Z up a bit and retract filament even more
 G1 E-20 F300            ;retract the filament a bit to release some of the pressure
 G90                     ;set to absolute positioning
 G0 X0 Y180 F8000        ;expose the platform
-;M120                    ;Enable endstop detection
 M84                     ;turn off steppers
 M104 T1 S0                 ;set extruder temperature to zero (turned off)
 M104 T0 S0                 ;set extruder temperature to zero (turned off)
