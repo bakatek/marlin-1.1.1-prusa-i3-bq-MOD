@@ -293,25 +293,31 @@
 #define BANG_MAX 255 // limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #if ENABLED(PIDTEMP)
-  #define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
+  //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
   #define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
+  // #define PID_FUNCTIONAL_RANGE 10 //MOD EPEL TEST FROM 10 TO 20 // If the temperature difference between the target temperature and the actual temperature
   #define PID_FUNCTIONAL_RANGE 20 //MOD EPEL TEST FROM 10 TO 20 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
   #define K1 0.95 //smoothing factor within the PID
   
-  // Prusa I3 with PT100 E1 3mm @ 265°
-  //#define  DEFAULT_Kp 15.72 // MOD EPEL
-  //#define  DEFAULT_Ki 2.63  // MOD EPEL
-  //#define  DEFAULT_Kd 23.51 // MOD EPEL
+  // Prusa I3 with PT100 E1 3mm @ 265° // M301 E1 P21.82 I2.75 D43.35
+  //#define  DEFAULT_Kp 21.82 // MOD EPEL
+  //#define  DEFAULT_Ki 2.75  // MOD EPEL
+  //#define  DEFAULT_Kd 43.35 // MOD EPEL
+  
+  //#define  DEFAULT_Kp 68.45 // MOD EPEL
+  //#define  DEFAULT_Ki 8.39 // MOD EPEL
+  //#define  DEFAULT_Kd 139.62 // MOD EPEL
+  
   // Hephestos i3
   #define  DEFAULT_Kp 23.05
   #define  DEFAULT_Ki 2.00
   #define  DEFAULT_Kd 66.47
-
+  
 #endif // PIDTEMP
 
 //===========================================================================
