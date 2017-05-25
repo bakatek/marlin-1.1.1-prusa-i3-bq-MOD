@@ -303,11 +303,10 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
   #define K1 0.95 //smoothing factor within the PID
   
-  // Prusa I3 with PT100
-  #define  DEFAULT_Kp 68.45 // MOD EPEL
-  #define  DEFAULT_Ki 8.39 // MOD EPEL
-  #define  DEFAULT_Kd 139.62 // MOD EPEL
-
+  // Prusa I3 with PT100 E1 3mm @ 265°
+  #define  DEFAULT_Kp 15.72 // MOD EPEL
+  #define  DEFAULT_Ki 2.63  // MOD EPEL
+  #define  DEFAULT_Kd 23.51 // MOD EPEL
   // Hephestos i3
   //#define  DEFAULT_Kp 23.05
   //#define  DEFAULT_Ki 2.00
