@@ -479,7 +479,7 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 100.47095761381482 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 800 }  // MOD EPEL
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 800 }  // MOD EPEL 2
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 800 }  // MOD EPEL 2
 
 /**
  * Default Max Feed Rate (mm/s)
