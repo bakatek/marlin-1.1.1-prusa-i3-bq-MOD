@@ -478,14 +478,16 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 100.47095761381482 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 800 }  // MOD EPEL
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 800 }  // MOD EPEL
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 800 }  // MOD EPEL 2
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 3.3, 25 }
+// #define DEFAULT_MAX_FEEDRATE          { 200, 200, 3.3, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 200, 200, 5, 25 }  // MOD EPEL
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
