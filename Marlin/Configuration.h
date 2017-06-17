@@ -368,7 +368,7 @@
 // or to allow moving the extruder regardless of the hotend temperature.
 // *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 240
+#define EXTRUDE_MINTEMP 210
 
 // This option prevents a single extrusion longer than EXTRUDE_MAXLENGTH.
 // Note that for Bowden Extruders a too-small value here may prevent loading.
@@ -479,7 +479,7 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 100.47095761381482 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 800 }  // MOD EPEL
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 800 }  // MOD EPEL 2
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 398, 800 }  // MOD EPEL 2
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -636,7 +636,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 23     // MOD EPEL // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0       // MOD EPEL // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.80    // MOD EPEL // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.95    // MOD EPEL // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -826,7 +826,7 @@
 
   // Set the boundaries for probing (where the probe can reach).
   #define LEFT_PROBE_BED_POSITION 30 // MOD EPEL 15
-  #define RIGHT_PROBE_BED_POSITION 175
+  #define RIGHT_PROBE_BED_POSITION 190
   #define FRONT_PROBE_BED_POSITION 40 // MOD EPEL 20
   #define BACK_PROBE_BED_POSITION 360 // MOD EPEL 170
 
